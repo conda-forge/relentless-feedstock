@@ -1,5 +1,5 @@
 {% set name = "relentless" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/relentless-{{ version }}.tar.gz
-  sha256: 735ca34288644d6cde4f0b59dbbbd8d1a7881bb02f9d879253002c9e3982787c
+  sha256: 5cd7b8b8a2ae4dba82bc25ba4aae27cb184e411c9961f5dbc712c69ccc59f757
 
 build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
